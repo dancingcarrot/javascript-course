@@ -41,7 +41,55 @@
         console.log(!ture);
         */
 
+        /*
+        if (0) { //truthy value - it behaves just like true 0: falsey value 
+            console.log(`truthy`);
+        }
+        const cartQuantity = 5;
+
+        if (cartQuantity) {
+            console.log(`cart has products`);
+        }
+
+        console.log(!0);
+
+        console.log(`text` / 5);
+
+        let variable1;
+        console.log(variable1); //undefined는 const와는 사용할 수 없음 
+        */
         
+        //Turnery operator
+        
+        const result = 0 ? `truthy` : `falsy`
+        console.log(result);
+
+        false && console.log(`hello`);
+
+        const message = 5 && `hello`;
+        console.log(message);
+
+        /* 위에 && 와 같은 맥락
+        let message ;
+
+        if(condition) {
+            message = `hello`;
+        }
+        */
+
+        //Dafault OR Operator
+
+        const currency = undefined || `USD`;
+        console.log(currency);
+        /* 위에 || 와 같은 맥락
+        let currency ;
+
+        if(!condition) {
+            currency = `USD`;
+        }
+        */
+
+        //Dafault OR Operator
     </script>
 </body>
 </html>
