@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    playGame(`heads`)">heads</button>
+  <button onclick="
+    playGame(`tails`)">tails</button>
+
+    <script>
+
+        const score = JSON.parse(localStorage.getItem('score')) || {
+            wins : 0,
+            losses : 0
+        };
+
+        function playGame(guess) {
+            //1. random number을 뽑아야함
+            const randomNumber = Math.random();
+            //2. radom number을 heads와 tails로 바꿔 출력해야함
+            const result = randomNumber < 0.5 ? `heads` : `tails`;
+
+            //3. guess값과 result값이 같으면 You win!출력 아니면 You lose출력
+            console.log(guess === result ? `You win!` : `You lose`);
+
+            if (guess === result) {
+                score.wins += 1;
+
+            }else {
+                score.losses += 1
+            }
+            
+        
+         console.log(score);
+       
+         localStorage.setItem('score',JSON.stringify(score));
+        }
+
+       
+        
+
+       
+
+            
+
+    </script>
+
+</body>
+</html>
+
