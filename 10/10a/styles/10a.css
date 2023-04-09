@@ -1,0 +1,10 @@
+.add{
+    background-color: (255,216,20);
+    border:none;
+    height: 40px;
+    width: 200px;
+    border-radius: 50px;
+    font-family: Arial;
+    font-size: 20px;
+    cursor: pointer;
+}
