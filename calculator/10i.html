@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="10i.css">
+</head>
+<body>
+ 
+    <p class="js-calculation"></p>
+
+    <p>
+      <button class="graybtn"onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button class="yellowbtn" onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button class="graybtn" onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button class="yellowbtn" onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button class="graybtn" onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button class="yellowbtn" onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button class="graybtn" onclick="
+        updateCalculation('0');
+      ">0</button>
+
+      <button class="graybtn" onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button class="graybtn" onclick="
+        calculation = eval(calculation);
+        
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button class="yellowbtn" onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button class="clearbtn" onclick="
+        calculation = '';
+        
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+    <script src="10i.js"></script>
+</body>
+</html>
